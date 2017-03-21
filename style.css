@@ -89,7 +89,7 @@ body{
 
 }
 
-
+/********************************************/
 .first{
 	margin-top: 115px;
 }
@@ -204,7 +204,74 @@ body{
 	float: right;
 }
 
+/********************************************/
+/*				SKILL AREA 					*/
+/********************************************/
 
+.purplecontainer{
+	background-color: #453c8b;
+	height: 500px;
+}
+.skills-center-img{
+	height: 200px;
+	width: 200px;
+}
+.mainskill{
+	color: #fff;
+    font-size: 23px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+.skilldescription{
+	font-size: 11px;
+    color: #fff;
+    font-weight: normal;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.skillimg{
+	/*margin:5px;*/
+	height: 18px;
+	width: 18px;
+}
+.left{
+ 	float: left;
+}
+.right{
+	float: right;
+}
+.fixedheight{
+	height: 80px;
+}
+.rowheight{
+	height: 130px;
+}
+
+.verticallymiddle {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    height: 100%;
+    margin-top: 76px;
+}
+.middleimage{
+	margin-top: 96px;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.rightparent{
+	text-align: right;
+	padding-right: 5px;
+}
+
+.leftparent{
+	text-align: left;
+	padding-left: 5px;
+}
+
+/********************************************/
+
+/********************************************/
 .odd{
 	
 }
@@ -261,7 +328,7 @@ body{
     font-size: 20px;
 }
 
-
+/********************************************/
 .highz{
 	z-index: 2;
 }
@@ -296,3 +363,15 @@ body{
 .centerparent{
 	text-align: center;
 }
+
+
+
+.number{
+	background: url(images/num1.png) no-repeat center;
+	background-size: 30px 30px;
+	height: 40px;
+	width: 40px;
+}
+
+
+/********************************************/
