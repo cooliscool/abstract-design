@@ -1,6 +1,5 @@
 	/*
 	Colors:
-	
 
 	main_purple : #453c8b;
 
@@ -33,6 +32,7 @@ body{
     -webkit-box-shadow: 0px 0px 26px -2px rgba(0,0,0,0.69);
     -moz-box-shadow: 0px 0px 26px -2px rgba(0,0,0,0.69);
  	box-shadow: 0px 0px 26px -2px rgba(0,0,0,0.69);
+ 	padding-top: 100px;
 }
 
 .top-intro-layer{
@@ -44,11 +44,16 @@ body{
     height: 100%;
 
 }
-.top-intro-parent{
-
+.topintroname{
+	font-size:50px;
 }
-.top-intro-kid{
-
+.topintrowho{
+	font-size:50px;
+	font-weight: bold;
+}
+.topintrowhat{
+	font-size:21px;
+	color: #f75f8e;
 }
 
 
@@ -90,12 +95,15 @@ body{
 }
 
 /********************************************/
+/* HELLO AREA
+/********************************************/
 .first{
-	margin-top: 115px;
+	margin-top: 20px;	
 }
 .amo{
 	width:100%;
     height:auto;
+    background:#fff;
 }
 .amo-bundle{
 	height: auto;
@@ -105,45 +113,21 @@ body{
     left: 50%;
 
 }
-
-.amo-minititlegroup{
-	height: auto;
-	width: 50%;
-}
-.amo-verbar{
-	font-size:80px;
-	display: inline-block;
-}
-.amo-headtext{
-	vertical-align: -15px;
-	display: inline-block;
-	font-weight: bold;
-}
-
-.amo-title{
-	font-size:50px;
-	margin-left: -50px;
-	font-weight: bold;
-}
-
-.amo-content{
-	margin-left: -50px;
-}
-
 .amo-content-p{
-		font-size: 17px;
+		margin-top: 50px;
+		font-size: 15px;
 	    color: #a09595;
-	    display: table-cell;
+	    margin-left: -112px;
+	    max-width:400px;
 }
-
-.amo-work-content{
-	width: 80%;
-    height: 341px;
-    margin-left: 10%;
-    margin-right: 10%;
+.ashbg{
+	background: #eeeeee;
 }
 
 
+/*****************************************/
+/* WORK AREA
+/*****************************************/
 .amo-work-img{
  	height: 250px;
     box-shadow: 0 0 0 2px #eee;
@@ -204,14 +188,80 @@ body{
 	float: right;
 }
 
+.dummy{
+	height: 180px;
+}
 /********************************************/
-/*				SKILL AREA 					*/
+/*SKILL AREA 					
 /********************************************/
 
 .purplecontainer{
 	background-color: #453c8b;
-	height: 500px;
+	height: 800px;
+
 }
+.hideoverflow{
+	overflow:hidden;
+}
+.skilltopskew{
+	height: 100px;
+    transform: skew(0deg, -3.5deg);
+    background: #453c8b;
+    margin-bottom: 0px;
+    top: -55px;
+    position: relative;
+}
+
+/*title part begin*/
+
+.skillmaintitle{
+	font-size:66px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.skillverbar{
+	font-size:80px;
+	color: #fff;
+	font-family: serif;
+	margin-bottom:0px;
+	padding-bottom: 0px;
+	border-bottom:0px;
+}
+.skillbartitle{
+	font-weight: normal;
+    color: #fff;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 8px;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.otri{
+	height: 160px;
+    width: 160px;
+    margin-top: -60px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.vara{
+	height: 45px;
+    margin-top: 10px;
+    margin-right: -7px;
+    float: right;
+}
+.pinkround{
+	height: 100px;
+    top: 0;
+    right: 0;
+    margin-right: -50px;
+    float: right;
+}
+
+/*title part end*/
 .skills-center-img{
 	height: 200px;
 	width: 200px;
@@ -234,10 +284,10 @@ body{
 	width: 18px;
 }
 .left{
- 	float: left;
+ 	float: right;
 }
 .right{
-	float: right;
+	float: left;
 }
 .fixedheight{
 	height: 80px;
@@ -269,12 +319,28 @@ body{
 	padding-left: 5px;
 }
 
+
+/********************************************/
+/* THANKYOU
+/********************************************/
+
+.thankheight{
+	margin-top: 300px;
+	margin-bottom: 300px;
+}
+.thankyou{
+
+	color: #f75f8e;
+    font-family: serif;
+    font-style: italic;
+    font-size: 80px;
+
+}
+
 /********************************************/
 
 /********************************************/
-.odd{
-	
-}
+
 
 .even{
 	background: #acacac;
@@ -282,24 +348,18 @@ body{
 }
 
 
-.diagonaldivP{
-	height:80px;
-	transform: skew(0deg, -4deg);
-	background: #453c8b;
-	margin-bottom:-20px;
 	
 /*	-webkit-box-shadow: -6px -24px 14px -26px rgba(0,0,0,0.69);
 	-moz-box-shadow: -6px -24px 14px -26px rgba(0,0,0,0.69);
 	box-shadow:-6px -24px 14px -26px rgba(0,0,0,0.69);*/
 
-}
 
 .diagonaldivN{
-	height:80px;
-	transform: skew(0deg, +4deg);
-	background: #eee;
-	margin-bottom:-30px;
-	margin-top:150px;
+	height: 102px;
+    transform: skew(0deg, +4deg);
+    background: #eee;
+    margin-bottom: -53px;
+    margin-top: 150px;
 }
 
 .amo-white{
@@ -364,8 +424,6 @@ body{
 	text-align: center;
 }
 
-
-
 .number{
 	background: url(images/num1.png) no-repeat center;
 	background-size: 30px 30px;
@@ -373,5 +431,13 @@ body{
 	width: 40px;
 }
 
-
+.black{
+	color:#000;
+}
+.white{
+	color: #fff;
+}
+.purple{
+	background-color: #453c8b;
+}
 /********************************************/
