@@ -11,8 +11,8 @@
   	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
   	<link href='component.css' rel='stylesheet' type='text/css'>
 
-  	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-
+  <!-- 	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+ -->
   	<script>
 	  $(document).ready(function(){
 	      $(".main").onepage_scroll({
@@ -21,7 +21,6 @@
 	        animationTime: 500,
 	        loop: false,
 	        easing: "ease",
-	        pagination: false,
 
 	      });
 
@@ -33,18 +32,19 @@
 		    	case 1:
 		      		$("#top-intro").animate({
 			            bottom: '0px'
-			        }, 700);
+			        }, 300);
 			        break;
 			      
-		      	default:
+		      	case 2:
 		      		$("#top-intro").animate({
 			            bottom: '-100px'
 			        }, 700);
 
 		    	}
-		   	   
-		      
-		    }	
+		   	 
+		    }
+
+
 		  });
 		});
 	</script>
