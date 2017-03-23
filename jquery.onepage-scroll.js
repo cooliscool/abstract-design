@@ -23,7 +23,7 @@
     animationTime: 1000,
     pagination: true,
     updateURL: false,
-    keyboard: true,
+    keyboard: false,
     beforeMove: null,
     afterMove: null,
     loop: true,
@@ -113,6 +113,9 @@
     $.fn.moveDown = function() {
       var el = $(this)
       index = $(settings.sectionContainer +".current").data("index");
+
+      if(index==11){return} //new
+
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
       if(next.length < 1) {
@@ -147,6 +150,9 @@
     $.fn.moveUp = function() {
       var el = $(this)
       index = $(settings.sectionContainer +".current").data("index");
+
+      if (index==1){ return} //new
+      
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
 
@@ -184,7 +190,7 @@
       // if (page_index==1) {
       //     current = $(settings.sectionContainer + ".current")
       // }
-      
+
       next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
       if(next.length > 0) {
         if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
