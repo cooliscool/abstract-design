@@ -1,0 +1,472 @@
+<html>
+<head>
+
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+
+			var max = 4;
+			var oldColor = "#333366"; 
+			var newColor = "#666699";
+			$('#current').css("background-color", newColor);
+
+			$('#checkbox').change(function(){
+			    setInterval(function () {
+			        moveRight();
+			    }, 3000);
+			  });
+		  	
+			var slideCount = $('#slider ul li').length;
+			var slideWidth = $('#slider ul li').width();
+			var slideHeight = $('#slider ul li').height();
+			var sliderUlWidth = slideCount * slideWidth;
+			
+			$('#slider').css({ width: slideWidth, height: slideHeight });
+			
+			$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+			
+		    $('#slider ul li:last-child').prependTo('#slider ul');
+
+		    function moveLeft(time) {
+		        $('#slider ul').animate({
+		            left: + slideWidth
+		        }, time, function () {
+		            $('#slider ul li:last-child').prependTo('#slider ul');
+		            $('#slider ul').css('left', '');
+		        });
+		    };
+
+		    function moveRight(time) {
+		        $('#slider ul').animate({
+		            left: - slideWidth
+		        }, time, function () {
+		            $('#slider ul li:first-child').appendTo('#slider ul');
+		            $('#slider ul').css('left', '');
+		        });
+		    };
+
+
+		    function move(from, to){
+		    	if(from == to)
+		    		return
+		    	if(from>to){
+		    		for (var i= from - to ; i > 0; i--)
+		    			moveLeft(200/i);
+    				return
+		    	}
+		    	else{
+		    		for (var i= to - from ; i > 0; i--)
+		    			moveRight(200/i);
+		    		return
+		    	}
+		    }
+
+
+		    $('a.control_prev').click(function () {
+
+
+		    	var now = parseInt($('#current').data("id")) ;
+		    	$('#current').css("background-color", oldColor);
+		    	$('#current').attr("id","");
+		    	
+		    	if (now == 1 ) now = max;
+		    	else now = now-1;
+
+		    	$('a[ data-id="'+ now + '"]').css("background-color", newColor);
+		    	$('a[ data-id="'+ now + '"]').attr("id","current");
+
+		        moveLeft(200);
+		    });
+
+		    $('a.control_next').click(function () {
+
+		    	var now = parseInt($('#current').data("id")) ;
+		    	$('#current').css("background-color", oldColor);
+		    	$('#current').attr("id","");
+
+		    	if (now == max ) now = 1;
+		    	else now = now + 1;
+
+		    	$('a[ data-id="'+ now + '"]').css("background-color", newColor);
+		    	$('a[ data-id="'+ now + '"]').attr("id","current");
+		        moveRight(200);
+		    });
+
+
+		     $('a.anav').click(function(){
+		    	var to = $(this).data("id") ;
+		    	var from = $('#current').data("id") ;
+
+		    	if (from == to) return;
+				$(this).css("background-color", newColor);
+				$('#current').css("background-color", oldColor);
+				$('#current').attr("id","");		
+				$(this).attr("id","current");
+
+				move(from,to);
+		    	// $(this).animate({
+			    //         backgroundColor: '#eeeeee'
+			    //     }, 200);
+		    	// $('#current').animate({
+			    //         backgroundColor: '#eeeeee'
+			    //     }, 200);
+		    	console.log(from ,to );
+		   	});
+			  
+		});    
+
+	</script>
+	<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
+
+
+			html, body {
+			  margin: 0;
+			  padding: 0;
+			  font-family: 'Open Sans';
+			  background-color: #1d193a ;
+			}
+
+			h2 {
+			  color: #fff;
+			  text-align: center;
+			  font-weight: 500;
+			  margin-top:12.5px;
+			}
+
+			#slider {
+				position: relative;
+			    overflow: hidden;
+			    margin: 0px auto 0 auto;
+			    border-radius: 5px;
+			}
+
+			#slider ul {
+			  position: relative;
+			  margin: 0;
+			  padding: 0;
+			  height: 250px;
+			  list-style: none;
+			}
+
+			#slider ul li {
+			  position: relative;
+			  display: block;
+			  float: left;
+			  margin: 0;
+			  padding: 0;
+			  width: 562.5px;
+			  height: 337.5px;
+			  background: #ccc;
+			  text-align: center;
+			  line-height: 375px;
+			}
+
+	
+	
+
+			a.control_prev {
+				top: -155px;
+			    position: relative;
+			    border-radius: 0 2.5px 2.5px 0;
+			    background-size: 85px 65px;
+			    background-image: url(images/arrow.png);
+			    padding: 30px 22.5px 30px 12.5px;
+			    outline: 0;
+			    text-decoration: none;
+			    opacity: 0.6;
+			    cursor: pointer;
+			    background-position: 0 0;
+			}
+
+			a.control_next {
+				top: -155px;
+			    position: relative;
+			    border-radius: 0 2.5px 2.5px 0;
+			    background-size: 85px 65px;
+			    background-image: url(images/arrow.png);
+			    padding: 30px 22.5px 30px 17.5px;
+			    outline: 0;
+			    text-decoration: none;
+			    opacity: 0.6;
+			    cursor: pointer;
+				background-position: -42.5px 0;
+			}
+
+			a.control_prev:hover, a.control_next:hover {
+			  opacity: 1;
+			  -webkit-transition: all 0.2s ease;
+			}
+
+
+			.slider_option {
+			  position: relative;
+			  margin: 12.5px auto;
+			  width: 200px;
+			  font-size: 22.5px;
+			}
+
+
+
+			#navigator {
+			  position: relative;
+			  overflow: hidden;
+			  margin: 10px auto 0 auto;
+			}
+
+			#navigator ul {
+			  position: relative;
+			  margin: 0;
+			  padding: 0;
+			  height: 5px;
+			  list-style: none;
+			}
+
+			#navigator ul li {
+			    position: relative;
+			    display: block;
+			    float: left;
+			    margin: 0 2.5px;
+			    padding: 0;
+			    /* width: 36px; */
+			    height: 5px;
+			    background: #333366;
+			    text-align: center;
+			}
+
+			#navigator ul li a{
+				padding-top: 4px;
+			    padding-right: 22.5px;
+			    background-color: #333366;
+			    border: 0px;
+			    margin: 0px;
+			}
+
+			.centergrid{
+				padding-left:auto;
+			    padding-right:auto;
+			    display:block;
+			}
+			.centerparent{
+				text-align: center;
+				display:block;
+			}
+
+			#current{
+				background: #eeeeee;
+			}
+
+
+			.nombp{
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			
+			.inline{
+				display: inline-block;
+				/*align-items: center;*/
+			}
+
+			.verticallymiddle{
+				display: inline-block;
+			    vertical-align: middle;
+			    float: none;
+			    height: 100%;
+			    margin-top: 95px;
+			}
+
+			.alignbundle{
+				text-align: center;
+				width: 90%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				max-height: 375px;
+			}
+			.alignbundle2{
+				text-align: center;
+				width: 90%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.alignextra{
+				display: inline-block;
+				text-align: center;
+			}
+
+			#back{
+				position: relative;
+				left: -281px;
+				margin-top: 62.5px;
+				color: #fff;
+				font-size: 12.5px;
+				display:block;
+			}
+
+			#back a {
+				color: #fff;
+				opacity: 0.9;
+				text-decoration: none;
+				outline:0;
+			}
+			#back a:hover {
+				color: #fff;
+				opacity: 1;
+				text-decoration: none;
+				outline:0;
+			}	
+			#back a img{
+				width: 15px;
+				display: inline-block;
+				outline:0;
+			}
+
+			#contenttitle{
+				color: #ff6699;
+			    font-weight: normal;
+			    display: inline-block;
+			    vertical-align: bottom;
+			    margin-bottom: 8.75px;
+			    padding-left: 10px;
+			    font-size: 13.75px;
+			    font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+			#contenttitlebar{
+				font-size:67.5px;
+				color: #999999;
+				font-family: serif;
+				margin-bottom:0px;
+				padding-bottom: 0px;
+				border-bottom:0px;
+			}
+			#blueround{
+				height: 38px;
+			    position: absolute;
+			    float: right;
+			    top: -25px;
+			    left: -25px;
+
+			}
+			.dummyrow{
+				margin-top: 38px;
+			}
+			#descriptionpara{
+				font-size: 11px;
+			    color: #fff;
+			    max-width:750px;
+			    font-weight: normal;
+			    text-align: left;
+			    margin-bottom: 40px;
+			    min-width:500px;
+			}
+
+			#tricircle{
+				    height: 100px;
+				    position: absolute;
+				    top: -82px;
+				    right: -59px;
+				    z-index: 9;
+				    float: right;
+				    opacity: 0.6;
+			}
+
+			#tricircle2{
+				height: 100px;
+				position: absolute;
+				top:-2px;
+				right:0px;
+				z-index: 9;
+				float:right;
+				opacity: 0.2;
+			}
+
+	</style> 
+</head>
+
+<body>
+	<div class="row ">
+		<div class="col-xs-2 col-xs-offset-6" id="back" >
+			<a href="index.html">
+				<img src='images/backarrow.svg'>&nbsp;BACK
+			</a>
+		</div>
+		<div class="col-xs-2"></div>
+		<div class="col-xs-2 ">
+			
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-1"></div>
+			<div class="col-xs-6" >
+					<h2>Minimalistic Poster</h2>
+					<img src='images/1.png' id="tricircle">
+
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="container">
+		<div class="row">
+			<div class="alignbundle">
+				<a href="#" class="control_prev alignextra"></a>
+				<div id="slider" class="alignextra">
+					<ul>
+						<li data-id="1">SLIDE 1</li>
+						<li data-id="2">SLIDE 2</li>
+						<li data-id="3">SLIDE 3</li>
+						<li data-id="4">SLIDE 4</li>
+					</ul>
+				</div>
+				<a href="#" class="control_next alignextra"></a>
+			</div>
+		</div>
+
+		<div class="row nombp">
+		
+			<div class="alignbundle2">
+				<div id="navigator" class="alignextra" >
+				<ul>
+				    <li><a class="anav" href="#" data-id="1" id="current"> &nbsp;</a></li>
+				    <li><a class="anav" href="#" data-id="2"> &nbsp;</a></li>
+				    <li><a class="anav" href="#" data-id="3"> &nbsp;</a></li>
+				    <li><a class="anav" href="#" data-id="4"> &nbsp;</a></li>
+			 	</ul> 					  	
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row dummyrow"></div>
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-1"></div>
+			<div class="col-xs-6" >
+					<img id="blueround" src="images/blueround.png">
+					<span id="contenttitlebar">|</span><span id="contenttitle">ABOUT THE PROJECT </span>
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-1"></div>
+			<div class="col-xs-6" >
+				<p id="descriptionpara">
+					Designing for a one of a kind fin-tech company such as Creditmantri was a major challenge. I undertook research regarding the dynamic market of financial inductry and the overall product functionality. The design functions included mind mapping, establishing user flows, understanding the consumer preferences and ideating new product features. 
+				</p>
+				<img src='images/1.png' id="tricircle2">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
