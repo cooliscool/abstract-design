@@ -22,7 +22,7 @@ html, body, div, p, h4{
 body{
 
 	font-family: sans-serif;
-	background-color: #eeeeee;
+	background-color: #f7f7f7;
 }
 
 
@@ -34,7 +34,7 @@ body{
 
 /*newnew*/
 .toptocenter{
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 .tophra{
@@ -42,7 +42,8 @@ body{
 }
 
 .top-intro{
-	background:url('images/top-bg.jpg');
+	background:url('images/top-bg.png');
+	background-position-y:-120px;
     position: relative;
     width:100%;
     -webkit-box-shadow: 0px 0px 26px -2px rgba(0,0,0,0.5);
@@ -54,7 +55,7 @@ body{
 }
 
 .top-intro-layer{
-	background-color: rgba( 69, 60,139, 0.7); /* main_purple  */
+	background-color: rgba( 69, 60,139, 0.91); /* main_purple  */
     position: absolute;
     top: 0;
     left: 0;
@@ -64,18 +65,33 @@ body{
 
 }
 .topintroname{
-	font-size:50px;
+	font-size:70px;
 }
 .topintrowho{
-	font-size:50px;
+	font-size:66px;
 	font-weight: bold;
 }
 .topintrowhat{
-	font-size:21px;
+	position: relative;
+	top: 38px;
+	font-size:26px;
 	color: #f75f8e;
 }
 
+#topvara1{
+	position: relative;
+    top: -50px;
+    right: -29px;
+    float: right;
+}
 
+#topvara2{
+	position: relative;
+    float: left;
+    top: 0px;
+    left: -160px;
+    height: 50px;
+}
 
 /********************************************/
 /* PAGE TWO
@@ -84,7 +100,7 @@ body{
 .top-skills{
 	height:60%; /*newnew*/
 
-	background:rgba( 69, 60,139, 0.8);
+	background:rgba( 69, 60,139, 0.9);
 	margin: 0 6%;
 	margin-top:-30px; /*newnew*/
 	padding:0px;
@@ -94,7 +110,7 @@ body{
 }
 
 .top-skills-textbar{
-	margin-top: 20px;/*newnew*/
+	margin-top: 44px;/*newnew*/
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -105,18 +121,40 @@ body{
 .top-skills-text{
 	color:#fff;
 	padding:0px;
-	font-size: 30px;
+	font-size: 54px;
+    font-weight: bold;
 }
 .top-skills-diag{
-	height: 204px;
+	height: 260px;
     transform: skew(0deg, -4deg);
-    background: rgb(103, 96, 159);
-
+    background: rgb(85, 77, 148);
     margin: 0 6%;
     margin-top: -102px;
 
 }
 
+#topvara3{
+	position: relative;
+    top: 100%;
+    z-index: 99;
+    left: 30%;
+    height: 36px;
+}
+
+#topvara4{
+	position: relative;
+    z-index: 99;
+    top: 110%;
+    left: 56%;
+    height: 30px;
+}
+
+#topvara5{
+	position: relative;
+    top: 18%;
+    left: 64%;
+    height: 33px;
+}
 /********************************************/
 /* HELLO AREA | PAGE THREE
 /********************************************/
@@ -138,13 +176,13 @@ body{
 }
 .amo-content-p{
 		margin-top: 50px;
-		font-size: 15px;
-	    color: #a09595;
+		font-size: 17px;
+	    color: #959595;
 	    margin-left: -112px;
 	    max-width:400px;
 }
 .ashbg{
-	background: #eeeeee;
+	background: #f7f7f7;
 }
 
 
@@ -153,7 +191,7 @@ body{
 /*****************************************/
 .amo-work-img{
  	height: 250px;
-    box-shadow: 0 0 0 2px #eee;
+    box-shadow: 0 0 0 2px #f7f7f7;
     border-radius: 8px;
  } 
 .amo-work-subheading{
@@ -261,13 +299,13 @@ body{
 /*title part begin*/
 
 .skillmaintitle{
-	font-size:66px;
+	font-size:69px;
 	font-weight: bold;
 	color: #fff;
 }
 
 .skillverbar{
-	font-size:80px;
+	font-size:84px;
 	color: #fff;
 	font-family: serif;
 	margin-bottom:0px;
@@ -281,7 +319,8 @@ body{
     vertical-align: bottom;
     margin-bottom: 8px;
     padding-left: 5px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
@@ -372,7 +411,7 @@ body{
 .skillbottomskew{
 	height: 99px;
     transform: skew(0deg, +4deg);
-    background: #eee;
+    background: #f7f7f7;
     /* margin-bottom: -53px; */
     margin-top: -97px;
     z-index: 2;
@@ -415,7 +454,7 @@ body{
 .diagonaldivN{
 	height: 120px;
     transform: skew(0deg, +4deg);
-    background: #eee;
+    background: #f7f7f7;
     margin-bottom: -53px;
     margin-top: -120px;
     z-index: 2;
