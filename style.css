@@ -186,6 +186,28 @@ body{
 }
 
 
+#dottedoval{
+	position: relative;
+    top: 135px;
+    left: 10%;
+    height: 400px;
+    z-index: 99;
+}
+
+#tricirle93{
+	position: absolute;
+    top: -37%;
+    left: 43%;
+    height: 154px;
+}
+
+#blueround93{
+	position: absolute;
+    top: -9%;
+    left: 46%;
+    height: 53px;
+}
+
 /*****************************************/
 /* WORK AREA | PAGE FOUR
 /*****************************************/
@@ -237,12 +259,22 @@ body{
 }
 
 .circle{
-	height: 60px;
+	height: 84px;
 	overflow: hidden;
 }
 .circleleft{
-	margin-left: -30px;
+	margin-left: -41px;
+    margin-top: 73px;
 }
+
+.vara95{
+	height: 50px;
+	overflow: hidden;
+}
+.vara95left{
+	margin-left: 20px;
+}
+
 
 .circleright{
 	margin-right: -30px;
@@ -332,12 +364,23 @@ body{
     position: relative;
 }
 
-.vara{
-	height: 45px;
-    margin-top: 10px;
-    margin-right: -7px;
+#tri94{
+	position: relative;
+    height: 117px;
+    top: -1px;
+    right: -53%;
+    z-index: 999;
+}
+
+#pinkround{
+	height: 42px;
+    position: absolute;
+    top: 69px;
+    right: -21px;
     float: right;
 }
+
+
 .pinkround{
 	height: 100px;
     top: 0;
@@ -414,8 +457,32 @@ body{
     background: #f7f7f7;
     /* margin-bottom: -53px; */
     margin-top: -97px;
-    z-index: 2;
+    z-index: -2;
     position: relative;
+}
+
+#pinkround96{
+	position: relative;
+    z-index: 99;
+    float: right;
+    top: 245px;
+    right: -51px;
+    height: 100px;
+
+}
+#vara96{
+	height: 40px;
+    position: relative;
+    z-index: 99;
+    right: -98px;
+}
+
+#dottedoval3{
+	position: absolute;
+    z-index: 99;
+    height: 400px;
+    bottom: -134px;
+    float: left;
 }
 /********************************************/
 /* THANKYOU
