@@ -408,8 +408,14 @@ body{
 
 .skillimg{
 	/*margin:5px;*/
-	height: 18px;
-	width: 18px;
+	width: 25px;
+}
+
+.skillimg4{
+	margin-top:88px;
+	width: 21px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .left{
  	float: right;
@@ -483,6 +489,12 @@ body{
     height: 400px;
     bottom: -134px;
     float: left;
+}
+
+.numb1{
+	background: url('images/num1.png') no-repeat center;
+	background-size: 100px;
+
 }
 /********************************************/
 /* THANKYOU
@@ -590,13 +602,6 @@ body{
 	text-align: center;
 }
 
-.number{
-	background: url(images/num1.png) no-repeat center;
-	background-size: 30px 30px;
-	height: 40px;
-	width: 40px;
-}
-
 .black{
 	color:#000;
 }
@@ -606,4 +611,8 @@ body{
 .purple{
 	background-color: #453c8b;
 }
+.anim{
+
+}
+
 /********************************************/
