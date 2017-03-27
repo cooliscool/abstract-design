@@ -257,11 +257,11 @@
 			}
 
 			#tricircle2{
-				height: 100px;
+				height: 130px;
 				position: absolute;
 				top:-2px;
 				right:0px;
 				z-index: 9;
 				float:right;
-				opacity: 0.2;
+				/*opacity: 0.2;*/
 			}
