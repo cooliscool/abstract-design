@@ -114,7 +114,7 @@
       var el = $(this)
       index = $(settings.sectionContainer +".current").data("index");
 
-      if(index==11){return} //new
+      if(index==13){return} //new
 
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
