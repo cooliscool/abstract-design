@@ -11,7 +11,10 @@
 	amocontenttitle_black: #000000 ;
 	link_pink: #f75f8e;
 	*/
-
+            @font-face {
+                font-family: 'avenir'; /*a name to be used later*/
+                src: url('../font/avenir-light.ttf'); /*URL to font*/
+            }
 
 html, body, div, p, h4,section{
 	padding: 0px;
@@ -21,7 +24,7 @@ html, body, div, p, h4,section{
 
 body{
 
-	font-family: sans-serif;
+	font-family: 'avenir';
 	background-color: #f7f7f7;
 }
 
@@ -241,7 +244,7 @@ section{
 }
 .amo-work-para{
 	max-width: 350px;
-    font-size: 12px;
+    font-size: 13.5px;
     color: #a09595;
     padding: 0px;
     border: 0px;
@@ -251,13 +254,13 @@ section{
 }
 
 .amo-work-para-art{
-	    max-width: 350px;
-    font-size: 12px;
+    max-width: 350px;
+    font-size: 13.5px;
     color: #a09595;
     padding: 0px;
     border: 0px;
     margin: 0px;
-    margin-top: 120px;
+    margin-top: 30px;
     margin-bottom: 38px;
     margin-right: -30px;
     /* float: right; */
@@ -290,8 +293,9 @@ section{
 .amo-work-right{
 	margin-right: -30px;
 }
+
 .amo-work-right-art{
-    margin-right: 30px;
+    margin-right: 21px;
 }
 .amo-work-rightlink{
 	margin-right: 90px;
@@ -351,7 +355,7 @@ section{
 
 .purplecontainer{
 	background-color: #453c8b;
-	height: 90%;
+	height: 100%;
 
 }
 .hideoverflow{
@@ -392,7 +396,7 @@ section{
     padding-left: 5px;
     font-size: 18px;
     font-weight: bold;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'avenir';
 }
 
 .otri{
@@ -436,13 +440,13 @@ section{
 .mainskill{
 	color: #fff;
     font-size: 23px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'avenir';
 }
 .skilldescription{
 	font-size: 11px;
     color: #fff;
     font-weight: normal;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'avenir';
 }
 
 .skillimg{
@@ -497,12 +501,12 @@ section{
 }
 
 .skillbottomskew{
-	height: 99px;
+	height: 120px;
     transform: skew(0deg, +4deg);
     background: #f7f7f7;
     /* margin-bottom: -53px; */
-    margin-top: -97px;
-    z-index: -2;
+    margin-top: -37px;
+    z-index: 0;
     position: relative;
 }
 
@@ -540,13 +544,13 @@ section{
 /********************************************/
 
 .thankheight{
-	margin-top: 300px;
+	margin-top: 250px;
 	margin-bottom: 300px;
 }
 .thankyou{
 
 	color: #f75f8e;
-    font-family: serif;
+    font-family: 'avenir';
     font-style: italic;
     font-size: 80px;
 
@@ -586,7 +590,7 @@ section{
 .viewmore{
 	/* <a> */
     border: 2px solid #f36a22;
-    font-family: 'courier_primebold';
+    font-family: 'avenir';
     letter-spacing: 2px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
