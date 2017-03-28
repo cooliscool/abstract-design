@@ -63,9 +63,10 @@
 			    padding: 30px 22.5px 30px 12.5px;
 			    outline: 0;
 			    text-decoration: none;
-			    opacity: 0.6;
+			    opacity: 0.9;
 			    cursor: pointer;
 			    background-position: 0 0;
+			    right: 13px;
 			}
 
 			a.control_next {
@@ -77,9 +78,10 @@
 			    padding: 30px 22.5px 30px 17.5px;
 			    outline: 0;
 			    text-decoration: none;
-			    opacity: 0.6;
+			    opacity: 0.9;
 			    cursor: pointer;
 				background-position: -42.5px 0;
+				left: 8px;
 			}
 
 			a.control_prev:hover, a.control_next:hover {
