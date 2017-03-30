@@ -644,8 +644,37 @@ a.amo-work-link:hover{
 .purple{
 	background-color: #453c8b;
 }
-.anim{
-
+#num1{
+    position: absolute;
+    height: 114px;
+    top: -14px;
+    left: 36.5%;
+    z-index: 0;
 }
 
+#num2{
+    position: absolute;
+    height: 114px;
+    z-index: 0;
+    left: -20%;
+    top: -33px;
+}
+#num3{
+    position: absolute;
+    height: 114px;
+    z-index: 4 ;
+    left: 36.5%;
+    top: -15px;
+}
+#num4{
+    position: absolute;
+    height: 114px;
+    z-index: 0;
+    left: 86%;
+    top: -30px;
+}
+.vhzindex{
+    position: relative;
+    z-index: 10;
+}
 /********************************************/
