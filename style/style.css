@@ -449,11 +449,10 @@ a.amo-work-link:hover{
 }
 
 .skillimg4{
-	margin-top:88px;
 	width: 21px;
-    display: inline-block;
-    vertical-align: middle;
 }
+
+
 .left{
  	float: right;
 }
@@ -475,7 +474,6 @@ a.amo-work-link:hover{
     margin-top: 76px;
 }
 .middleimage{
-	margin-top: 96px;
 	display: inline-block;
     vertical-align: middle;
 }
