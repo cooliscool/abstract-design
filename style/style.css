@@ -539,10 +539,16 @@ a.amo-work-link:hover{
 	margin-top: 250px;
 	margin-bottom: 300px;
 }
+
+	@font-face {
+                font-family: 'braxton'; /*a name to be used later*/
+                src: url('../font/braxton.otf'); /*URL to font*/
+            }
+
 .thankyou{
 
 	color: #f75f8e;
-    font-family: 'avenir';
+    font-family: 'braxton';
     font-style: italic;
     font-size: 80px;
 
