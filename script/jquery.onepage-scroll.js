@@ -114,7 +114,8 @@
       var el = $(this)
       index = $(settings.sectionContainer +".current").data("index");
 
-      if(index==13){return} //new
+      if(index==13){return} //this is the number of the last page . 
+	// for the page to stop scrolling here.
 
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
