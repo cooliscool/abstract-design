@@ -1,0 +1,30 @@
+#num1{
+  left: 36%;
+}
+
+.extrarightsk{
+  margin-right: -20%;
+}
+
+.extraleftsk{
+  margin-left: -20%;
+}
+
+
+@media screen and (max-width: 1250px) {
+
+  #num1{
+    left: 35%;
+  }
+
+
+  .extrarightsk{
+    margin-right: -18%;
+    /*padding-right: 20px;*/
+  }
+
+  .extraleftsk{
+    margin-left: -18%;
+    /*padding-left: 20px;*/
+  }
+}

@@ -633,3 +633,10 @@ a.amo-work-link:hover{
     z-index: 10;
 }
 /********************************************/
+.extrarightsk{
+  margin-right: -22%;
+}
+
+.extraleftsk{
+  margin-left: -22%
+}
