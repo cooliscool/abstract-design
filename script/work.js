@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
 			var max = $('a.anav').length;
-			var oldColor = "#333366"; 
+			var oldColor = "#333366";
 			var newColor = "#666699";
 			$('#current').css("background-color", newColor);
 
@@ -10,16 +10,16 @@ jQuery(document).ready(function ($) {
 			        moveRight();
 			    }, 3000);
 			  });
-		  	
+
 			var slideCount = $('#slider ul li').length;
 			var slideWidth = $('#slider ul li').width();
 			var slideHeight = $('#slider ul li').height();
 			var sliderUlWidth = slideCount * slideWidth;
-			
+
 			$('#slider').css({ width: slideWidth, height: slideHeight });
-			
+
 			$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-			
+
 		    $('#slider ul li:last-child').prependTo('#slider ul');
 
 		    function moveLeft(time) {
@@ -40,8 +40,37 @@ jQuery(document).ready(function ($) {
 		        });
 		    };
 
+				function setHeading(num , target){
+					var headings = [
+						'Minimal movie poster',
+						'Newspaper Advertisement',
+						'SpeakU Logo',
+						'Aurum Lily logo',
+						'Wall Art concept'
+					];
+
+					var n = num -1;
+
+					$(target).animate({
+						'opacity' : '0'
+					}, 300, function(){
+						$(target).text(headings[n]);
+						$(target).animate({
+							'opacity' : '1.0'
+						}, 300)
+					});
+
+
+					console.log('yoyo');
+				}
+
 
 		    function move(from, to){
+
+					if ($('.dynamicheading').length){
+							setHeading(to, '.dynamicheading');
+					}
+
 		    	if(from == to)
 		    		return
 		    	if(from>to){
@@ -60,31 +89,35 @@ jQuery(document).ready(function ($) {
 		    $('a.control_prev').click(function () {
 
 
-		    	var now = parseInt($('#current').data("id")) ;
+					var now = parseInt($('#current').data("id")) ;
 		    	$('#current').css("background-color", oldColor);
 		    	$('#current').attr("id","");
-		    	
-		    	if (now == 1 ) now = max;
-		    	else now = now-1;
 
-		    	$('a[ data-id="'+ now + '"]').css("background-color", newColor);
-		    	$('a[ data-id="'+ now + '"]').attr("id","current");
+					var to;
+		    	if (now == 1 ) to = max;
+		    	else to = now-1;
 
-		        moveLeft(200);
+		    	$('a[ data-id="'+ to + '"]').css("background-color", newColor);
+		    	$('a[ data-id="'+ to + '"]').attr("id","current");
+
+					console.log(now,to);
+		      move(now,to);
 		    });
 
 		    $('a.control_next').click(function () {
 
-		    	var now = parseInt($('#current').data("id")) ;
+					var now = parseInt($('#current').data("id")) ;
 		    	$('#current').css("background-color", oldColor);
 		    	$('#current').attr("id","");
+					var to;
+		    	if (now == max ) to = 1;
+		    	else to = now + 1;
 
-		    	if (now == max ) now = 1;
-		    	else now = now + 1;
+		    	$('a[ data-id="'+ to + '"]').css("background-color", newColor);
+		    	$('a[ data-id="'+ to + '"]').attr("id","current");
 
-		    	$('a[ data-id="'+ now + '"]').css("background-color", newColor);
-		    	$('a[ data-id="'+ now + '"]').attr("id","current");
-		        moveRight(200);
+					console.log(now,to);
+		      move(now,to);
 		    });
 
 
@@ -95,7 +128,7 @@ jQuery(document).ready(function ($) {
 		    	if (from == to) return;
 				$(this).css("background-color", newColor);
 				$('#current').css("background-color", oldColor);
-				$('#current').attr("id","");		
+				$('#current').attr("id","");
 				$(this).attr("id","current");
 
 				move(from,to);
@@ -107,5 +140,5 @@ jQuery(document).ready(function ($) {
 			    //     }, 200);
 		    	console.log(from ,to );
 		   	});
-			  
-		});    
+
+		});
