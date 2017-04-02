@@ -115,7 +115,7 @@ section{
 	padding:0px;
 	border-bottom: 2px;
 	position: relative;
-	
+
 }
 
 .top-skills-textbar{
@@ -124,7 +124,7 @@ section{
     z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);	
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
 }
 
 .top-skills-text{
@@ -168,7 +168,7 @@ section{
 /* HELLO AREA | PAGE THREE
 /********************************************/
 .first{
-	margin-top: 20px;	
+	margin-top: 20px;
 }
 .amo{
 	width:100%;
@@ -242,7 +242,7 @@ section{
     width: 600px;
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
- } 
+ }
 .amo-work-subheading{
 	margin-top: 54px;
     font-size: 28px;
@@ -339,12 +339,12 @@ a.amo-work-link:hover{
 	position: relative;
     width:100%;
     height:100%;
-    padding-top: 80px;	
+    padding-top: 80px;
     background-color: #fff;
 }
 
 /********************************************/
-/*SKILL AREA  | PAGE 10	
+/*SKILL AREA  | PAGE 10
 /********************************************/
 
 .purplecontainer{
@@ -565,7 +565,7 @@ a.amo-work-link:hover{
 }
 
 
-	
+
 /*	-webkit-box-shadow: -6px -24px 14px -26px rgba(0,0,0,0.69);
 	-moz-box-shadow: -6px -24px 14px -26px rgba(0,0,0,0.69);
 	box-shadow:-6px -24px 14px -26px rgba(0,0,0,0.69);*/
@@ -654,7 +654,7 @@ a.amo-work-link:hover{
     position: absolute;
     height: 114px;
     top: -14px;
-    left: 36.5%;
+    left: 35%;
     z-index: 0;
 }
 
