@@ -1,5 +1,7 @@
-## Designer Portfolio 
+## Website - Designer Portfolio 
 
-Designed by Prashanth Ashok.
+Checkout the live version here : [https://cooliscool.github.io/abstract-design](https://cooliscool.github.io/abstract-design).
 
-Developed by Ajmal Moochingal
+Designed by _Prashanth Ashok_
+
+Developed by _Ajmal Moochingal_
